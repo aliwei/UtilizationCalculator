@@ -341,5 +341,11 @@ namespace UtilizationCalculator
             closeFile();
             System.Environment.Exit(0);
         }
+
+        private void 帮助ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            helpForm help = new helpForm();
+            help.Show();
+        }
     }
 }
