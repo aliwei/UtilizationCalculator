@@ -1,0 +1,14 @@
+H:\c#\utilizationCalculator\UtilizationCalculator\UtilizationCalculator\bin\Debug\UtilizationCalculator.exe.config
+H:\c#\utilizationCalculator\UtilizationCalculator\UtilizationCalculator\bin\Debug\UtilizationCalculator.exe
+H:\c#\utilizationCalculator\UtilizationCalculator\UtilizationCalculator\bin\Debug\UtilizationCalculator.pdb
+H:\c#\utilizationCalculator\UtilizationCalculator\UtilizationCalculator\obj\Debug\UtilizationCalculator.csprojResolveAssemblyReference.cache
+H:\c#\utilizationCalculator\UtilizationCalculator\UtilizationCalculator\obj\Debug\UtilizationCalculator.Properties.Resources.resources
+H:\c#\utilizationCalculator\UtilizationCalculator\UtilizationCalculator\obj\Debug\UtilizationCalculator.csproj.GenerateResource.Cache
+H:\c#\utilizationCalculator\UtilizationCalculator\UtilizationCalculator\obj\Debug\UtilizationCalculator.exe
+H:\c#\utilizationCalculator\UtilizationCalculator\UtilizationCalculator\obj\Debug\UtilizationCalculator.pdb
+H:\c#\utilizationCalculator\UtilizationCalculator\UtilizationCalculator\obj\Debug\UtilizationCalculator.UtilizationCalculator.resources
+H:\c#\utilizationCalculator\UtilizationCalculator\UtilizationCalculator\obj\Debug\UtilizationCalculator.csproj.ResolveComReference.cache
+G:\2016\utilizationCalculator\UtilizationCalculator\UtilizationCalculator\bin\Debug\UtilizationCalculator.exe.config
+G:\2016\utilizationCalculator\UtilizationCalculator\UtilizationCalculator\obj\Debug\UtilizationCalculator.csproj.ResolveComReference.cache
+G:\2016\utilizationCalculator\UtilizationCalculator\UtilizationCalculator\obj\Debug\UtilizationCalculator.exe
+G:\2016\utilizationCalculator\UtilizationCalculator\UtilizationCalculator\obj\Debug\UtilizationCalculator.pdb
