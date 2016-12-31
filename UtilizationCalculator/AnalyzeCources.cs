@@ -29,7 +29,7 @@ namespace UtilizationCalculator
             int index = 0;
             string[] retstr = new string[1];
 
-            System.Collections.ArrayList list = new System.Collections.ArrayList();
+            //System.Collections.ArrayList list = new System.Collections.ArrayList();
 
             index = str.IndexOf("节/周");
             if (index != -1)

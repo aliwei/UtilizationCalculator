@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Office.Interop.ExcelEdit;
 using testlistview;
@@ -96,12 +89,6 @@ namespace UtilizationCalculator
             ListViewItem item = e.Cell.Item;
             int itemindex = e.Cell.Column.Index;
             item.SubItems[itemindex].Text = value;
-        }
-
-        private void openfile_Click(object sender, EventArgs e)
-        {
-
-            
         }
 
         private int findClassNameInClassView(string className)
@@ -197,7 +184,6 @@ namespace UtilizationCalculator
                     }
                 }//end for
             }//end for
-
         }
 
         private void clearView()
@@ -245,11 +231,39 @@ namespace UtilizationCalculator
             totalTimeBox.Text = plantime.ToString();
         }
 
+        private bool IsNumberic(string oText)
+        {
+            try
+            {
+                int var1 = Convert.ToInt32(oText);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         private void studenCountConfirm_Click(object sender, EventArgs e)
         {
+            bool dataVaild = false;
             for (int i = 0; i < courceview.Items.Count; i++)
             {
-                courceview.Items[i].SubItems[4].Text = getStudentCountInClassView(courceview.Items[i].SubItems[3].Text);
+                string str = getStudentCountInClassView(courceview.Items[i].SubItems[3].Text);
+                dataVaild = IsNumberic(str);
+                if (dataVaild == false)
+                {
+                    MessageBox.Show("人数输入错误！");
+                    break;
+                }
+            }
+
+            if (dataVaild == true)
+            {
+                for (int i = 0; i < courceview.Items.Count; i++)
+                {
+                    string str = getStudentCountInClassView(courceview.Items[i].SubItems[3].Text);
+                    courceview.Items[i].SubItems[4].Text = str;
+                }
             }
         }
 
@@ -332,10 +346,17 @@ namespace UtilizationCalculator
             closeFile();
         }
 
+        private void myExitApp()
+        {
+            if (DialogResult.OK == MessageBox.Show("你确定要关闭应用程序吗？", "关闭提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Question))
+            {
+                closeFile();
+                System.Environment.Exit(0);
+            }
+        }
         private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            closeFile();
-            System.Environment.Exit(0);
+            myExitApp();
         }
 
         private void 帮助ToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -348,6 +369,11 @@ namespace UtilizationCalculator
         {
             aboutForm about = new aboutForm();
             about.Show();
+        }
+
+        private void UtilizationCalculator_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            myExitApp();
         }
     }
 }

@@ -245,6 +245,7 @@
             this.Name = "UtilizationCalculator";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UtilizationCalculator";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UtilizationCalculator_FormClosing);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
