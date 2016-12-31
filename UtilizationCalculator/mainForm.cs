@@ -39,19 +39,16 @@ namespace UtilizationCalculator
             h5.Text = "人数";
             h5.Width = 70;
             ColumnHeader h6 = new ColumnHeader();
-            h6.Text = "周数原始数据";
-            h6.Width = 150;
+            h6.Text = "周数";
+            h6.Width = 100;
             ColumnHeader h7 = new ColumnHeader();
-            h7.Text = "周数";
+            h7.Text = "人时数";
             h7.Width = 100;
-            ColumnHeader h8 = new ColumnHeader();
-            h8.Text = "人时数";
-            h8.Width = 100;
 
-            courceview.Columns.AddRange(new ColumnHeader[] { h1, h2, h3, h4, h5, h6, h7, h8});
+            courceview.Columns.AddRange(new ColumnHeader[] { h1, h2, h3, h4, h5, h6, h7});
             courceview.View = View.Details;
             courselist = new EditableListView(courceview);
-            courselist.TextBoxColumns = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+            courselist.TextBoxColumns = new int[] { 0, 1, 2, 3, 4, 5, 6, 7, 8};
             courselist.Submitting += new EditableListViewSubmitting(courseViewSaveEditHandler);
         }
 
@@ -150,7 +147,6 @@ namespace UtilizationCalculator
             lvi.SubItems.Add(info.courcetype);
             lvi.SubItems.Add(info.classname);
             lvi.SubItems.Add("0");
-            lvi.SubItems.Add(info.timestr);
             lvi.SubItems.Add(info.weeks.ToString());
             lvi.SubItems.Add("0");
             courceview.Items.Add(lvi);
@@ -228,11 +224,11 @@ namespace UtilizationCalculator
             for (int i = 0; i < courceview.Items.Count; i++)
             {
                 studenCount = int.Parse(courceview.Items[i].SubItems[4].Text);
-                week = int.Parse(courceview.Items[i].SubItems[6].Text);
+                week = int.Parse(courceview.Items[i].SubItems[5].Text);
                 studenTime = studenCount* week * 2;
 
                 plantime += studenTime;
-                courceview.Items[i].SubItems[7].Text = studenTime.ToString();
+                courceview.Items[i].SubItems[6].Text = studenTime.ToString();
 
                 if (string.Compare(courceview.Items[i].SubItems[2].Text, "实验") == 0)
                 {
@@ -346,6 +342,12 @@ namespace UtilizationCalculator
         {
             helpForm help = new helpForm();
             help.Show();
+        }
+
+        private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            aboutForm about = new aboutForm();
+            about.Show();
         }
     }
 }

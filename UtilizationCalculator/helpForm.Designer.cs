@@ -34,9 +34,9 @@
             // 
             // helpBox
             // 
-            this.helpBox.Location = new System.Drawing.Point(35, 23);
+            this.helpBox.Location = new System.Drawing.Point(12, 12);
             this.helpBox.Name = "helpBox";
-            this.helpBox.Size = new System.Drawing.Size(611, 252);
+            this.helpBox.Size = new System.Drawing.Size(615, 257);
             this.helpBox.TabIndex = 0;
             this.helpBox.Text = "";
             // 
@@ -44,7 +44,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(679, 307);
+            this.ClientSize = new System.Drawing.Size(639, 281);
             this.Controls.Add(this.helpBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
